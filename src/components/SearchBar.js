@@ -2,7 +2,8 @@ import React from "react";
 import { TextInput, View, StyleSheet } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
-const SearchBar = () => {
+const SearchBar = ({term, onTermChanged}) => {
+  
   return (
     <View style={styles.backgroundStyle}>
       <Feather style={styles.iconStyle} name="search" size={50} />
@@ -11,6 +12,8 @@ const SearchBar = () => {
         placeholder="Search"
         autoCorrect={false}
         autoCapitalize="none"
+        value={term}
+        onChangeText={(newTerm)=>onTermChanged(newTerm)}
       />
     </View>
   );
