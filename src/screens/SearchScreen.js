@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import SearchBar from "../components/SearchBar";
 import yelp from "../api/yelp";
@@ -21,6 +21,12 @@ const SearchScreen = () => {
       setError("Something went wrong");
     }
   };
+
+  useEffect(()=>{
+    searchApi()
+  },[]
+  )
+
   return (
     <View style={styles.background}>
       <SearchBar
