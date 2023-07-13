@@ -15,7 +15,7 @@ const SearchScreen = () => {
   };
 
   return (
-    <View style={styles.background}>
+    <>
       <SearchBar
         term={term}
         onTermChanged={(newTerm) => setTerm(newTerm)}
@@ -34,7 +34,7 @@ const SearchScreen = () => {
           title="Big Spender"
         />
       </ScrollView>
-    </View>
+    </>
   );
 };
 
