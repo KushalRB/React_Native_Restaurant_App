@@ -22,13 +22,15 @@ const SearchScreen = () => {
         onEndEdit={() => searchApi(term)}
       />
       {errorMessage ? <Text>{errorMessage}</Text> : null}
-      <Text>We have found {results.length} results</Text>
       <ScrollView>
         <ResultsList
           results={filterResultsByPrice("$")}
           title="Cost Effective"
         />
-        <ResultsList results={filterResultsByPrice("$$")} title="Bit Pricier" />
+        <ResultsList 
+          results={filterResultsByPrice("$$")} 
+          title="Bit Pricier" 
+        />
         <ResultsList
           results={filterResultsByPrice("$$$")}
           title="Big Spender"
@@ -41,7 +43,7 @@ const SearchScreen = () => {
 const styles = StyleSheet.create({
   background: {
     backgroundColor: "#FFFFFF",
-    flex:1
+    flex: 1,
   },
 });
 

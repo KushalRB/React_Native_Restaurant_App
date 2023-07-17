@@ -15,7 +15,6 @@ export default () => {
           limit: 50,
         },
       });
-      console.log(response);
       setResult(response.data.businesses);
     } catch (e) {
       console.log(e);
